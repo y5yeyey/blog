@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+<body>
+  {% block navbar %}
+    <li><a href="/about">About</a></li>
+    <li><a href="/projects">Projects</a></li>
+    <li><a href="/resume">Resume</a></li>
+    <li><a href="/contact">Contact</a></li>
+  {% endblock %}
+
+  {% block main %}
+    <h1 class="header">Resume</h1>
+    <p>
+        My resume.
+    </p>
+  {% endblock %}
+</body>
