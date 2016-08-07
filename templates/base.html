@@ -19,11 +19,28 @@
     
   <body>
 
-      <!-- TODO Progress
-      <div class="progress">
-          <div class="determinate"></div>
-      </div>
-      -->
+    <div class="progress" id="progress">
+        <div class="determinate" id="progressBar"></div>
+    </div>
+      
+      <script>
+          var $progress = document.getElementById('progress');
+          var $progressBar = document.getElementById('progressBar');
+          var bar_val = 10;
+          var timeout = 10;
+          setTimeout(function () {
+              if(window.loaded = true){
+                $progress.style.display = "none";
+                return;
+              }
+              bar_val += 10;
+              if(bar_val > 90){
+                  bar_val = 90;
+              }
+              $progressBar.style.width = bar_val + "%";
+          }, timeout);
+          $progressBar.style.width = '100%';
+      </script>
       
       <!-- Navbar -->
       <nav>
